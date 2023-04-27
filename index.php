@@ -10,6 +10,7 @@
 <form action="" method="post">
 <input type="submit" name="student_login" value="Student Login">
 <input type="submit" name="admin_login" value="admin Login">
+<input type="submit" name="Faculty_login" value="Faculty Login">
 </form>
 <?php
 if (isset($_POST['student_login'])){
@@ -19,6 +20,9 @@ if (isset($_POST['admin_login'])){
 	header("Location: admin_login.php");
 }
 
+if (isset($_POST['Faculty_login'])){
+	header("Location: faculty_login.php");
+}
 
 ?>
 
