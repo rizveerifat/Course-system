@@ -9,6 +9,6 @@
 ?>
 
 <script type="text/javascript">
-    alert("Details Edited Successfully");
+    alert("Details Deleted Successfully on courses table");
     window.location.href="student_dashboard.php";
     </script>

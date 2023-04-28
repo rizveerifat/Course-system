@@ -9,7 +9,17 @@
     session_start();
     $connection = mysqli_connect("localhost","root","");
     $db = mysqli_select_db($connection,"cms");
+	
+	
+    
     ?>
+	<style>
+            body{
+	            background: linear-gradient(rgba(0,0,25,0.5),rgba(0,0,25,0.5)),url(cms1.jpg);
+	            background-size:cover;
+	            background-position:center;
+    }
+    </style> 
 </head>
 <body>
 
@@ -42,7 +52,13 @@
                         <input type="submit" name="Number_of_course_left" value="Number_of_course_left">
                     </td>
                 </tr>
-				    </tr>    				
+				<tr>
+                    <td>
+                        <input type="submit" name="go_back"  value="Go Back">
+                    </td>
+                </tr>
+				    
+                       				
             </table>
         </form>
     
@@ -209,7 +225,7 @@
                             <td> <?php echo $row['id'];?></td>
                         </tr>
                         <tr>
-                            <td><b>Grade : </b></td>
+                            <td><b>Course left : </b></td>
                             <td><?php echo $row['course_left'];?></td>
                         </tr>
                         
@@ -222,6 +238,17 @@
     ?>
 	
 	
+
+
+<?php 
+       
+     
+if (isset($_POST['go_back'])){
+	header("Location: student_dashboard.php");
+}
+
+
+?>
 	
 	
     </center>

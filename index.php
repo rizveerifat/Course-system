@@ -2,8 +2,17 @@
 <html>
 <head>
 <title>Login page</title>
+<style>
+            body{
+	            background: linear-gradient(rgba(0,0,25,0.5),rgba(0,0,25,0.5)),url(cms.jpg);
+	            background-size:cover;
+	            background-position:center;
+    }
+    </style>
+
 </head>
 <body>
+
 
 <center><br><br>
 <h3> Course Management system</h3><br><br>
@@ -12,6 +21,11 @@
 <input type="submit" name="admin_login" value="admin Login">
 <input type="submit" name="Faculty_login" value="Faculty Login">
 </form>
+
+
+
+
+
 <?php
 if (isset($_POST['student_login'])){
 	header("Location: student_login.php");

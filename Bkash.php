@@ -2,13 +2,21 @@
 <html lang="en">
 <head>
   <title>Bkash Payment</title>
+  
+	<style>
+            body{
+	            background: linear-gradient(rgba(0,0,25,0.5),rgba(0,0,25,0.5)),url(cms1.jpg);
+	            background-size:cover;
+	            background-position:center;
+    }
+    </style> 
     
 </head>
 <body>
 <center><br><br>
     
 
-                <h3 >Student Login Page</h3><br>
+                <h3 >Bkash</h3><br>
 				<form action="" method="post">
 			StudentName: <input type="text" name="StudentName" required><br><br>
 			StudentID: <input type="number" name="StudentID" required><br><br>

@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
   <title>Rocket Payment</title>
+  <style>
+            body{
+	            background: linear-gradient(rgba(0,0,25,0.5),rgba(0,0,25,0.5)),url(cms1.jpg);
+	            background-size:cover;
+	            background-position:center;
+    }
+    </style> 
+    
     
 </head>
 <body>

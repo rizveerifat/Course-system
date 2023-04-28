@@ -10,6 +10,14 @@
     $connection = mysqli_connect("localhost","root","");
     $db = mysqli_select_db($connection,"cms");
     ?>
+	
+	<style>
+            body{
+	            background: linear-gradient(rgba(0,0,25,0.5),rgba(0,0,25,0.5)),url(cms1.jpg);
+	            background-size:cover;
+	            background-position:center;
+    }
+    </style> 
 </head>
 <body>
 <div id="header">
@@ -40,6 +48,11 @@
                 <tr>
                     <td>
                         <input type="submit" name="add_details" value="add_details">
+                    </td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="submit" name="go_back"  value="Go Back">
                     </td>
                 </tr>
 </table>
@@ -300,6 +313,16 @@
 	
 
 
+
+<?php 
+       
+     
+if (isset($_POST['go_back'])){
+	header("Location: index.php");
+}
+
+
+?>
 
 
 

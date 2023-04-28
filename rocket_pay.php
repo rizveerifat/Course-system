@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
   <title>Rocket Payment</title>
+  <style>
+            body{
+	            background: linear-gradient(rgba(0,0,25,0.5),rgba(0,0,25,0.5)),url(cms1.jpg);
+	            background-size:cover;
+	            background-position:center;
+    }
+    </style> 
+    
   
     
 </head>
@@ -19,19 +27,42 @@
 			
 		
 			<input type="submit" name="submit" value="submit">
-		</form><br>   
+			
+		</form><br> 
+<form action="" method="post">
+
+
+            <table>	
+            <tr>
+                    <td>
+                        <input type="submit" name="go_back"  value="Go Back">
+                    </td>
+                </tr>
+            </table>
+        </form>				
 			
 <?php 
         if(isset($_POST['submit'])){
 			
         $connection = mysqli_connect("localhost","root","");
         $db = mysqli_select_db($connection,"cms");
-        $query="insert into paymentone values('$_POST[StudentName]','$_POST[StudentID]','$_POST[StudentDepartment]','$_POST[Totalfee]')";
+        $query="insert into paymenttwo values('$_POST[StudentName]','$_POST[StudentID]','$_POST[StudentDepartment]','$_POST[Totalfee]')";
         $query_run = mysqli_query($connection,$query);
 		}
 ?>
             
-          
+  
+<?php 
+       
+     
+if (isset($_POST['go_back'])){
+	header("Location: payment.php");
+}
+
+
+?>
+
+        
             
      
 	</center>	

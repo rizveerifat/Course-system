@@ -6,6 +6,9 @@
         $query_run = mysqli_query($connection,$query);
 ?>
 <script type="text/javascript">
-    alert("Details Edited Successfully");
+    alert("Details Edited Successfully in courses table");
     window.location.href="admin_dashboard.php";
     </script>
+	
+	
+	

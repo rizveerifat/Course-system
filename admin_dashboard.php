@@ -10,6 +10,15 @@
     $connection = mysqli_connect("localhost","root","");
     $db = mysqli_select_db($connection,"cms");
     ?>
+	
+	
+	<style>
+            body{
+	            background: linear-gradient(rgba(0,0,25,0.5),rgba(0,0,25,0.5)),url(cms1.jpg);
+	            background-size:cover;
+	            background-position:center;
+    }
+    </style> 
 </head>
 <body>
 
@@ -49,6 +58,13 @@
                         <input type="submit" name="go_back"  value="Go Back">
                     </td>
                 </tr>
+				
+				<tr>
+                    <td>
+                        <input type="submit" name="add_status_date" value="Add Status and Payment date of Student" >
+                    </td>
+                </tr>
+
                    
             </table>
         </form>
@@ -189,7 +205,43 @@
         }
     ?>
 	
-
+	
+    <?php 
+        if(isset($_POST['add_status_date'])){
+            ?>
+            <center><h4>Fill up the given fields : </h4>
+            <form action="update_paystatus_date.php" method="post">
+            <table>
+                        <tr>
+                            <td><b>Student ID : </b></td>
+                            <td><input type="text" name="id" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><b>Pay status: </b></td>
+                            <td><input type="text" name="payment_status" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><b>year: </b></td>
+                            <td><input type="text" name="year" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><b>semester : </b></td>
+                            <td><input type="text" name="semester" value=""></td>
+                        </tr>
+						                        <tr>
+                            <td><b>Payment date: </b></td>
+                            <td><input type="text" name="last_date" value=""></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit"  value="Add"></td>
+                        </tr>
+                    </table>
+					</center>
+            </form>
+            <?php
+        }
+    ?>
 
 
 <?php 

@@ -7,6 +7,6 @@
 ?>
 
 <script type="text/javascript">
-    alert("Details  added Successfully");
+    alert("Details  added in courses table Successfully");
     window.location.href="admin_dashboard.php";
     </script>
